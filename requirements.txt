@@ -1,0 +1,181 @@
+# Python Dependencies for Nav2 Controller Benchmark
+# Compatible with Python 3.10+ on Ubuntu 22.04
+
+# Core scientific computing
+numpy>=1.24.0,<2.0.0
+pandas>=2.0.0,<3.0.0
+scipy>=1.10.0,<2.0.0
+
+# Plotting and visualization
+matplotlib>=3.7.0,<4.0.0
+seaborn>=0.12.0,<1.0.0
+
+# ROS 2 rosbag2 processing (optional if using ROS 2 directly)
+# Note: rosbags provides Python-only rosbag2 reading (no ROS installation needed)
+rosbags>=0.9.15,<1.0.0
+
+# Statistical analysis
+statsmodels>=0.14.0,<1.0.0
+
+# Data validation and quality checks
+pyyaml>=6.0,<7.0.0
+
+# Progress bars for long-running analysis
+tqdm>=4.65.0,<5.0.0
+
+# Jupyter notebook support (optional, for interactive analysis)
+jupyter>=1.0.0,<2.0.0
+ipykernel>=6.25.0,<7.0.0
+ipywidgets>=8.1.0,<9.0.0
+
+# Export to different formats
+openpyxl>=3.1.0,<4.0.0  # For Excel export
+pyarrow>=12.0.0,<13.0.0  # For Parquet format
+
+# System utilities
+psutil>=5.9.0,<6.0.0  # For monitoring system resources during experiments
+
+# Optional: For advanced visualization
+plotly>=5.15.0,<6.0.0  # Interactive plots (optional)
+
+# Development and testing (optional)
+pytest>=7.4.0,<8.0.0
+pytest-cov>=4.1.0,<5.0.0
+black>=23.7.0,<24.0.0  # Code formatting
+flake8>=6.1.0,<7.0.0  # Linting
+
+# ============================================================================
+# INSTALLATION INSTRUCTIONS
+# ============================================================================
+
+# Standard installation (required packages only):
+#   pip install -r requirements.txt
+
+# Development installation (includes testing and linting):
+#   pip install -r requirements.txt
+#   pip install pytest pytest-cov black flake8
+
+# Minimal installation (if disk space is limited):
+#   pip install numpy pandas matplotlib scipy pyyaml tqdm
+
+# Virtual environment (recommended):
+#   python3 -m venv ~/nav2_benchmark_env
+#   source ~/nav2_benchmark_env/bin/activate
+#   pip install -r requirements.txt
+
+# ============================================================================
+# PLATFORM-SPECIFIC NOTES
+# ============================================================================
+
+# Ubuntu 22.04 (recommended):
+#   All packages work out-of-the-box with pip
+#   System packages needed: python3-pip, python3-dev
+
+# Ubuntu 20.04:
+#   May require Python 3.10 from deadsnakes PPA:
+#     sudo add-apt-repository ppa:deadsnakes/ppa
+#     sudo apt install python3.10 python3.10-dev python3.10-venv
+
+# macOS:
+#   Install Homebrew Python: brew install python@3.10
+#   Some packages may require Xcode Command Line Tools
+
+# Windows:
+#   Install Python from python.org (3.10+)
+#   Use pip in Command Prompt or PowerShell
+#   Note: ROS 2 is not natively supported on Windows; use WSL2
+
+# ============================================================================
+# DEPENDENCY NOTES
+# ============================================================================
+
+# NumPy: Core array operations, used in all analysis scripts
+# pandas: DataFrame manipulation for metrics and summaries
+# scipy: Statistical tests (Mann-Whitney U, Scheirer-Ray-Hare)
+# matplotlib: 2D plotting (box plots, trajectories, heatmaps)
+# seaborn: Enhanced statistical visualizations
+# rosbags: Python-only rosbag2 reader (alternative to ROS 2 rosbag2_py)
+# statsmodels: Additional statistical models (not heavily used)
+# pyyaml: YAML file parsing (controller configs, maps)
+# tqdm: Progress bars for batch processing
+# jupyter: Interactive analysis in notebooks (optional but recommended)
+# openpyxl: Excel export for non-technical users
+# pyarrow: Fast Parquet I/O (10-20× faster than CSV for large datasets)
+# psutil: Monitor CPU/RAM during experiments
+# plotly: Interactive plots for exploratory analysis (optional)
+
+# ============================================================================
+# VERSION COMPATIBILITY
+# ============================================================================
+
+# This requirements file is tested with:
+#   - Python 3.10.12 (Ubuntu 22.04 default)
+#   - Python 3.11.x (also compatible)
+#   - Python 3.12.x (mostly compatible, minor warnings possible)
+
+# NOT compatible with:
+#   - Python 3.9 or earlier (missing type hints, syntax features)
+#   - Python 2.x (completely unsupported)
+
+# ============================================================================
+# TROUBLESHOOTING
+# ============================================================================
+
+# If "pip install" fails with "No matching distribution":
+#   pip install --upgrade pip setuptools wheel
+
+# If NumPy/SciPy installation is slow:
+#   sudo apt install python3-numpy python3-scipy  # Use system packages
+#   pip install -r requirements.txt --no-deps     # Skip numpy/scipy from pip
+
+# If running out of memory during pip install:
+#   pip install --no-cache-dir -r requirements.txt
+
+# If matplotlib backend issues on headless server:
+#   export MPLBACKEND=Agg  # Use non-interactive backend
+#   (add to ~/.bashrc for persistence)
+
+# ============================================================================
+# PERFORMANCE TIPS
+# ============================================================================
+
+# For faster data loading:
+#   - Use Parquet instead of CSV (10-20× faster)
+#   - Use pyarrow engine: pd.read_parquet('data.parquet', engine='pyarrow')
+
+# For faster plotting:
+#   - Use matplotlib 'Agg' backend for batch generation
+#   - Disable interactive mode: plt.ioff()
+
+# For memory efficiency:
+#   - Load data in chunks: pd.read_csv('data.csv', chunksize=10000)
+#   - Use categorical dtypes: df['controller'] = df['controller'].astype('category')
+
+# ============================================================================
+# UPDATES AND MAINTENANCE
+# ============================================================================
+
+# To check for outdated packages:
+#   pip list --outdated
+
+# To upgrade all packages (use with caution):
+#   pip install --upgrade -r requirements.txt
+
+# To freeze exact versions (for maximum reproducibility):
+#   pip freeze > requirements_frozen.txt
+
+# ============================================================================
+# CONTACT
+# ============================================================================
+
+# For issues with dependencies or installation:
+#   - GitHub Issues: https://github.com/ClaudioUrrea/DWB-RPP-MPPI/issues
+#   - Email: claudio.urrea@usach.cl
+
+# ============================================================================
+# LICENSE
+# ============================================================================
+
+# All dependencies are open-source with permissive licenses (MIT, BSD, Apache)
+# See individual project repositories for detailed license information
+# This requirements file itself: MIT License (same as main project)

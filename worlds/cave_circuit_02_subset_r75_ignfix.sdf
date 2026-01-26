@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6"><world name="cave_circuit_02"><physics name="1ms" type="ode"><max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    
+     
+    
+    <scene><ambient>1.0 1.0 1.0 1.0</ambient>
+      <background>1 1 1 1.0</background>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
+    <shadows>false</shadows></scene>
+    <light type="directional" name="sun"><cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.8 0.8 0.8 1</specular>
+      <attenuation><range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+       
+    
+    
+    <include><name>artifact_origin</name>
+      <pose>10.0 0.0 0.0 0 0 0</pose>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Fiducial</uri>
+    </include>
+
+      
+    <include><static>true</static>
+      <name>tile_40</name>
+      <pose>50.0 0.0 0.0 0.0 0.0 1.5708</pose>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Cave 3 Way 01 Lights Type B</uri>
+    </include>
+    
+    <plugin name="ignition::gazebo::systems::SceneBroadcaster" filename="libignition-gazebo-scene-broadcaster-system.so" /><plugin name="ignition::gazebo::systems::Sensors" filename="libignition-gazebo-sensors-system.so" /><plugin name="ignition::gazebo::systems::UserCommands" filename="libignition-gazebo-user-commands-system.so" /><plugin name="ignition::gazebo::systems::Physics" filename="libignition-gazebo-physics-system.so" /></world></sdf>

@@ -1,0 +1,101 @@
+MIT License
+
+Copyright (c) 2026 Claudio Urrea, Kevin Valencia-Aragón
+University of Santiago of Chile (USACH)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+ADDITIONAL NOTES:
+
+1. CITATION REQUIREMENT:
+   While this software is provided under the permissive MIT License, we kindly 
+   request that academic and research users cite the associated publication:
+
+   Urrea, C., & Valencia-Aragón, K. (2026). Theoretical Analysis and Systematic 
+   Comparison of Local Navigation Control Strategies in Semi-Structured 
+   Environments: A Systems Approach. Systems, XX(X), XXX. 
+   https://doi.org/XXXXX
+
+2. DATA LICENSE:
+   The accompanying dataset on FigShare (https://doi.org/10.6084/m9.figshare.31150735)
+   is also provided under MIT License with the same terms.
+
+3. THIRD-PARTY COMPONENTS:
+   This software builds upon several open-source projects:
+   
+   - ROS 2 (Apache License 2.0)
+     Copyright (c) Open Source Robotics Foundation, Inc.
+     https://github.com/ros2
+   
+   - Navigation2 (Apache License 2.0)
+     Copyright (c) 2018 Intel Corporation
+     https://github.com/ros-planning/navigation2
+   
+   - Gazebo Ignition (Apache License 2.0)
+     Copyright (c) Open Source Robotics Foundation, Inc.
+     https://github.com/gazebosim
+   
+   - NumPy (BSD 3-Clause License)
+     Copyright (c) 2005-2023, NumPy Developers
+     https://numpy.org/
+   
+   - pandas (BSD 3-Clause License)
+     Copyright (c) 2008-2023, AQR Capital Management, LLC, Lambda Foundry, Inc. 
+     and PyData Development Team
+     https://pandas.pydata.org/
+   
+   - Matplotlib (PSF License)
+     Copyright (c) 2002-2023 The Matplotlib Development Team
+     https://matplotlib.org/
+   
+   - SciPy (BSD 3-Clause License)
+     Copyright (c) 2001-2023 SciPy Developers
+     https://scipy.org/
+
+   All third-party components retain their original licenses. See individual
+   project repositories for complete license texts.
+
+4. DISCLAIMER:
+   This software was developed for research purposes. While efforts have been
+   made to ensure correctness and reliability, the authors make no warranties
+   about the suitability of this software for any particular purpose, including
+   but not limited to deployment on physical robots or safety-critical systems.
+
+5. ROBOT PLATFORM:
+   The Clearpath Husky robot model and URDF files used in this project are
+   property of Clearpath Robotics Inc. and are used under their respective
+   licenses. Users should consult Clearpath Robotics documentation for terms
+   of use: https://clearpathrobotics.com/
+
+6. CONTRIBUTIONS:
+   Contributions to this project are welcome and will be accepted under the
+   same MIT License terms. By submitting a pull request, you agree to license
+   your contribution under the MIT License.
+
+7. CONTACT:
+   For questions about licensing or usage:
+   - Claudio Urrea: claudio.urrea@usach.cl
+   - Kevin Valencia-Aragón: kevin.valencia@usach.cl
+   - GitHub: https://github.com/ClaudioUrrea/DWB-RPP-MPPI
+
+---
+
+Last Updated: January 26, 2026
