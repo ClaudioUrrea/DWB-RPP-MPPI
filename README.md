@@ -7,7 +7,7 @@
 
 ## Overview
 
-This repository contains the complete source code, simulation configurations, and experimental infrastructure supporting the research paper **"Theoretical Analysis and Systematic Comparison of Local Navigation Control Strategies in Semi-Structured Environments: A Systems Approach"** published in *Systems* (MDPI).
+This repository contains the complete source code, simulation configurations, and experimental infrastructure supporting the research paper **"Theoretical Analysis and Systematic Comparison of Local Navigation Control Strategies in Semi-Structured Environments: A Systems Approach"** published in *Systems* **2026**, *14*(3), 228 (https://doi.org/10.3390/systems14030228).
 
 The benchmark systematically evaluates three local navigation controllers from the ROS 2 Navigation2 (Nav2) stack:
 - **DWB** (Dynamic Window Approach-based controller)
@@ -32,12 +32,12 @@ If you use this code or dataset in your research, please cite:
   title={Theoretical Analysis and Systematic Comparison of Local Navigation Control Strategies in Semi-Structured Environments: A Systems Approach},
   author={Urrea, Claudio and Valencia-Arag{\'o}n, Kevin},
   journal={Systems},
-  volume={XX},
-  number={X},
-  pages={XXX},
+  volume={14},
+  number={3},
+  pages={228},
   year={2026},
   publisher={MDPI},
-  doi={XXX}
+  doi={10.3390/systems14030228}
 }
 ```
 
@@ -280,7 +280,7 @@ figshare_dataset/
 
 1. **Download the FigShare dataset**:
 ```bash
-wget https://figshare.com/ndownloader/files/XXXXXX -O dataset.zip
+wget https://figshare.com/ndownloader/articles/31150735 -O dataset.zip   # all files of the Figshare item
 unzip dataset.zip -d ./figshare_data
 ```
 
